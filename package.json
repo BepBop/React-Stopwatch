@@ -1,0 +1,38 @@
+{
+  "name": "react-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gyan Anjay",
+  "license": "MIT",
+  "description": "Trying to figure out tooling and learning react, ofcourse",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "i": "^0.3.7",
+    "npm": "^8.4.1",
+    "parcel": "^2.0.0-rc.0",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BepBop/React-Practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BepBop/React-Practice/issues"
+  },
+  "homepage": "https://github.com/BepBop/React-Practice#readme"
+}
