@@ -2,6 +2,7 @@
 /.parcel-cache
 /dist
 /node_modules
+/src/*.map
 .idea
 package-lock.json
 
