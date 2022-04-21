@@ -1,0 +1,5 @@
+"eslint:recommended",
+"plugin:react/recommended",
+"plugin:jsx-a11y/recommended",
+"plugin:import/errors",
+"pretter"

@@ -1,26 +1,43 @@
-import React, { useState } from 'react';
-import * as classes from './style.module.css';
-import { Input } from './Input';
-import { Watch } from './Watch';
+import React, { useState, useEffect } from 'react';
+import './App.scss';
 
 export function App() {
-	const [InputValue, setInputValue] = useState('');
-	const [Arr, setArr] = useState(['']);
+	const [Sec, setSec] = useState(0);
+
+	const [Hand, setHand] = useState(0);
+	const [Flag, setFlag] = useState(false);
+
+	if (Sec === 60) {
+		setSec(0);
+		setHand(Hand + 1);
+	}
+
+	useEffect(() => {
+		if (Flag) {
+			const id = setInterval(() => {
+				setSec((sec) => sec + 1);
+			}, 1000);
+
+			return () => {
+				clearInterval(id);
+			};
+		}
+	}, [Flag]);
+
 	return (
-		<div className={classes.flex}>
-			<Input
-				Input={InputValue}
-				setInput={setInputValue}
-				fun={(event) => {
-					setArr((prev) => [...prev, event]);
-				}}
-			/>
-			{Arr.map((event) => (
-				<>
-					{event}
-					<Watch />
-				</>
-			))}
-		</div>
+		<>
+			<div className="time">{`${Hand} : ${Sec} `}</div>
+
+			<div className="buttons">
+				<button
+					type="button"
+					onClick={() => {
+						setFlag(!Flag);
+					}}
+				>
+					<div>{Flag ? '▶️' : '⏸️'} </div>
+				</button>
+			</div>
+		</>
 	);
 }
