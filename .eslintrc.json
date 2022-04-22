@@ -1,19 +1,28 @@
 {
-  "extends": [
-    "airbnb",
-    "airbnb/hooks",
-    "plugin:prettier/recommended",
-    "prettier/prettier"
-  ],
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "node": true
-  },
-  "rules": {
-    "react/destructuring-assignment": ["off"],
-    "jsx-a11y/href-no-hash": ["off"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }]
-  }
+	"extends": ["airbnb", "airbnb/hooks", "prettier"],
+	"rules": {
+		"react/prop-types": 1,
+		"react/react-in-jsx-scope": 0,
+		"react/destructuring-assignment": 1,
+		"jsx-a11y/href-no-hash": 0,
+		"import/prefer-default-export": 0,
+		"react/jsx-filename-extension": 0
+	},
+	"parserOptions": {
+		"ecmaVersion": 2022,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
 }

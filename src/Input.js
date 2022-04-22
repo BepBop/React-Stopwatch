@@ -1,5 +1,4 @@
-import React from 'react';
-import * as classes from './style.module.css';
+import * as classes from "./style.module.css";
 
 export function Input(props) {
 	const onSubmit = (event) => {
