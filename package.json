@@ -8,7 +8,7 @@
 	"keywords": [],
 	"author": "Gyan Anjay",
 	"license": "MIT",
-	"description": "Trying to figure out hooks",
+	"description": "Figuring out hooks",
 	"devDependencies": {
 		"@parcel/transformer-sass": "^2.5.0",
 		"eslint": "latest",
