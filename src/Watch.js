@@ -12,15 +12,14 @@ export function Watch() {
 		setHand(Hand + 1);
 	}
 
-	function call() {
-		setTimeout(() => {
-			setSec(Sec + 1);
-		}, 1000);
-	}
-
 	useEffect(() => {
 		if (Flag) {
-			call();
+			const time = setTimeout(() => {
+				setSec(Sec + 1);
+			}, 1000);
+			return () => {
+				clearTimeout(time);
+			};
 		}
 	});
 
